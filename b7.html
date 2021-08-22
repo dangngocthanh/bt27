@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+<lable>a=<input type="number" id="C"></lable>
+<lable>b=<input type="number" id="D"></lable>
+<lable>c=<input type="number" id="E"></lable>
+<button onclick="change()">Tính</button>
+<p id="F"></p>
+<script>
+    function change(){
+        let a =+document.getElementById('C').value
+        let b =+document.getElementById('D').value
+        let c =+document.getElementById('E').value
+        if (a===0 && b===0)document.getElementById('F').innerHTML='Phương trình có vô số nghiệm'
+        else if (a===0 && b||0)document.getElementById('F').innerHTML= 'x='+((-c)/b)
+        else {
+            let delta=(b*b)-(4*a*c)
+            let e=Math.sqrt(delta)
+            if (delta<0) document.getElementById('F').innerHTML='Phương trình vô nghiệm'
+            else if (delta===0) document.getElementById('F').innerHTML='Phương trình có nghiệm kép: x1=x2='+ (-b/(2*a))
+            else document.getElementById('F').innerHTML='Phương trình có 2 nghiệm phân biệt: x1='+ ((-b+e)/(2*a)) +'x2='+ ((-b-e)/(2*a))
+        }
+    }
+</script>
+</body>
+</html>

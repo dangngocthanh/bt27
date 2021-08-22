@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+<lable><input type="number" id="C"> Nhập cạnh a</lable>
+<button onclick="change()">Tính</button>
+<p id="F"></p>
+<script>
+    function change(){
+        let a =+document.getElementById('C').value
+        a =a * 4
+        document.getElementById('F').innerHTML=a
+    }
+</script>
+</body>
+</html>

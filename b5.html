@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+<lable>Cạnh a:<input type="number" id="C"></lable>
+<lable>Cạnh b:<input type="number" id="D"></lable>
+<button onclick="change()">Tính</button>
+<p id="F"></p>
+<script>
+  function change(){
+    let a =+document.getElementById('C').value
+    let b =+document.getElementById('D').value
+    a =(a * b)/2
+    document.getElementById('F').innerHTML=a
+  }
+</script>
+</body>
+</html>

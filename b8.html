@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+<lable><input type="number" id="C"> :age</lable>
+<button onclick="change()">Check </button>
+<p id="F"></p>
+<script>
+    function change(){
+        let a =+document.getElementById('C').value
+        if (a>0 && a<120) document.getElementById('F').innerHTML=a+' là số tuổi của một người'
+        else document.getElementById('F').innerHTML=a+' không là số tuổi của một người'
+    }
+</script>
+</body>
+</html>

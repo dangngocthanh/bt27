@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+<lable>a=<input type="number" id="C"></lable>
+<lable>b=<input type="number" id="D"></lable>
+<button onclick="change()">Tính</button>
+<p id="F"></p>
+<script>
+    function change(){
+        let a =+document.getElementById('C').value
+        let b =+document.getElementById('D').value
+        if (a==0) document.getElementById('F').innerHTML='Phương trình có vô số nghiệm'
+        let x= ((-b)/a)
+        document.getElementById('F').innerHTML='x= '+x
+    }
+</script>
+</body>
+</html>

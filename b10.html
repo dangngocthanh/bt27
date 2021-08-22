@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+<lable><input type="number" id="C"> :kWh</lable>
+<br>
+<lable>Giá tiền cho 1 kWh: <input type="number" id="D"> </lable>
+<br>
+<button onclick="change()">Check </button>
+<p id="F"></p>
+<script>
+    function change(){
+        let a =+document.getElementById('C').value
+        let b =+document.getElementById('D').value
+        document.getElementById('F').innerHTML=a*b+'VND'
+    }
+</script>
+</body>
+</html>
