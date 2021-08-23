@@ -7,15 +7,23 @@
 <body>
 <lable><input type="number" id="C"> :kWh</lable>
 <br>
-<lable>Giá tiền cho 1 kWh: <input type="number" id="D"> </lable>
-<br>
 <button onclick="change()">Check </button>
 <p id="F"></p>
 <script>
     function change(){
         let a =+document.getElementById('C').value
-        let b =+document.getElementById('D').value
-        document.getElementById('F').innerHTML=a*b+'VND'
+        let b = 50*1678;
+        let c = 50*1734;
+        let d = 100*2014;
+        let e = 100*2536;
+        let f = 100*2834;
+        if (a>=400) document.getElementById('F').innerHTML= ((a-400)*2927)+b+c+d+e+f+'VND'
+            else if (a>=300) document.getElementById('F').innerHTML= ((a-300)*2834)+b+c+d+e+'VND'
+        else if (a>=200) document.getElementById('F').innerHTML= ((a-200)*2536)+b+c+d+'VND'
+        else if (a>=100) document.getElementById('F').innerHTML= ((a-100)*2014)+b+c+'VND'
+        else if (a>=50) document.getElementById('F').innerHTML= ((a-50)*1734)+b+'VND'
+        else if (a>=0) document.getElementById('F').innerHTML= (a*1678)+'VND'
+        else document.getElementById('F').innerHTML= 'nhập lại số kWh'
     }
 </script>
 </body>

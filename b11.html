@@ -5,17 +5,21 @@
     <title>Rwed</title>
 </head>
 <body>
-<lable> Số tiền tính thuế<input type="number" id="C"></lable>
-<br>
-<lable>Thuế suất<input type="number" id="D"> %</lable>
+<lable> Số tiền tính thuế<input type="number" id="C"> :Triệu VND</lable>
 <br>
 <button onclick="change()">Check </button>
 <p id="F"></p>
 <script>
     function change(){
         let a =+document.getElementById('C').value
-        let b =+document.getElementById('D').value
-        document.getElementById('F').innerHTML= a*b
+        if (a> 80)document.getElementById('F').innerHTML= a/100*35+'VND'
+        else if (a> 52)document.getElementById('F').innerHTML= a/100*30+'VND'
+        else if (a> 32)document.getElementById('F').innerHTML= a/100*25+'VND'
+        else if (a> 18)document.getElementById('F').innerHTML= a/100*20+'VND'
+        else if (a> 10)document.getElementById('F').innerHTML= a/100*15+'VND'
+        else if (a> 5)document.getElementById('F').innerHTML= a/100*10+'VND'
+        else if (a> 0)document.getElementById('F').innerHTML= a/100*5+'VND'
+
     }
 </script>
 </body>
